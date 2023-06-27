@@ -14,15 +14,15 @@ MODEL:
 DATASETS:
   TRAIN: ("gsv_train",)
   TEST: ("gsv_val",)
-OUTPUT_DIR: "./exp/step01-gsv-perspective-pretrain"
+OUTPUT_DIR: "./exp/step01-gsv-perspective-pretrain-0627"
 TEST:
   EVAL_PERIOD: 2000
 SOLVER:
-  IMS_PER_BATCH: 32
+  IMS_PER_BATCH: 8
   BASE_LR: 0.001
-  STEPS: (40000, 60000)
-  MAX_ITER: 90000
-  CHECKPOINT_PERIOD: 2000
+  STEPS: (4000, 6000)
+  MAX_ITER: 10000
+  CHECKPOINT_PERIOD: 1000
 DATALOADER:
   NUM_WORKERS: 8
   AUGMENTATION: True
